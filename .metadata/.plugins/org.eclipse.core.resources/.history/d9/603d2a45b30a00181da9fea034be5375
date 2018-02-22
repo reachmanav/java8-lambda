@@ -1,0 +1,15 @@
+package org.manav.lambda;
+
+public class Greeter {
+
+	public static void main(String[] args) {
+
+
+
+	}
+
+}
+
+interface Greeting {
+	public void perform();
+}

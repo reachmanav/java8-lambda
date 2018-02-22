@@ -1,0 +1,58 @@
+package org.manav.lambda;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Unit1Exercise {
+
+	//public void sortList
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<Person> people = Arrays.asList(
+				new Person("Manav","Shah",33),
+				new Person("Dhaval","Chini",18),
+				new Person("Dabal","Chaman",28),
+				new Person("Puja","Shikhare",34)
+		);
+		
+		
+		
+		//Step 1:Sort
+		Collections.sort(people, new Comparator<Person>() {
+
+			@Override
+			public int compare(Person o1, Person o2) {
+				return o1.getLastName().compareTo(o2.getLastName());
+			}
+			
+		});
+				
+		// Step 2: Call a method which will print the list
+		printAllPeople(people);
+		
+		//Step 3: Print only those people whose last name begins with "C" 
+		printLastNameBeginwithC(people);
+		
+	}
+
+	
+	public static void printLastNameBeginwithC(List<Person> people) {
+		System.out.println("Printing all persons with last name beginning as C");
+		System.out.println("-----------------------------------------------------");
+		for (Person onePerson:people)
+			System.out.println(onePerson);
+	}
+	
+	public static void printAllPeople(List<Person> people) {
+		System.out.println("Printing all persons sorting with last name");
+		System.out.println("------------------------------------------------");
+		for (Person onePerson:people)
+			System.out.println(onePerson);
+	}
+
+}

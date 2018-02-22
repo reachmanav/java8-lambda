@@ -1,0 +1,56 @@
+package org.manav.lambda;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+public class Unit1ExerciseJava8 {
+
+	//public void sortList
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<Person> people = Arrays.asList(
+				new Person("Manav","Shah",33),
+				new Person("Dhaval","Chini",18),
+				new Person("Dabal","Chaman",28),
+				new Person("Puja","Shikhare",34)
+		);	
+		
+		
+		//Step 1:Sort
+		Collections.sort(people, (p1, p2) -> p1.getLastName().compareTo(p2.getLastName()));
+				
+		// Step 2: Call a method which will print the list
+		printConditionally(people, p -> true, p -> System.out.println(p));
+		
+		//Step 3: Print only those people whose last name begins with "C" 
+		System.out.println("-----------------------------------------------------");
+		System.out.println("Printing all persons with last name beginning as C");
+		System.out.println("-----------------------------------------------------");		
+		printConditionally(people, p -> p.getLastName().startsWith("C"),  p -> System.out.println(p));		
+				
+		//Step 4: Print only those people whose First name begins with "M" 
+		System.out.println("-----------------------------------------------------");
+		System.out.println("Printing all persons with first name beginning as M");
+		System.out.println("-----------------------------------------------------");
+		printConditionally(people, p -> p.getFirstName().startsWith("M"),  p -> System.out.println(p));	
+		
+	}
+	
+	public static void printConditionally(List<Person> people, Predicate<Person> predicate, Consumer<Person> consumer) {
+		for (Person onePerson:people)  {
+			if (predicate.test(onePerson))  {
+				//System.out.println(onePerson);
+				consumer.accept(onePerson);
+			}
+		}
+	}
+		
+
+}

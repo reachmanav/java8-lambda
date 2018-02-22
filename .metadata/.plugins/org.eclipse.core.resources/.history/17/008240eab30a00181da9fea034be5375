@@ -1,0 +1,19 @@
+package org.manav.lambda;
+
+public class Greeter {
+
+	public static void main(String[] args) {
+
+		//Greeting normalGreeting = new HelloWorldGreeting();
+		//normalGreeting.perform();
+
+		Greeting lambdaGreeting = public void perform()  {
+			System.out.println("Hello World");
+		}
+		
+		lambdaGreeting.perform();
+
+	}
+
+}
+

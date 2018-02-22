@@ -1,0 +1,26 @@
+package org.manav.lambda;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class StreamExample {
+
+	public static void main(String[] args) {
+
+
+		List<Person> people = Arrays.asList(
+				new Person("Manav","Shah",33),
+				new Person("Dhaval","Chini",18),
+				new Person("Dabal","Chaman",28),
+				new Person("Puja","Shikhare",34)
+		);
+		
+		
+		System.out.println(people.stream().findFirst()); 
+		
+		System.out.println(people.stream().filter(p -> p.getLastName().startsWith("C"))); 
+		
+	}
+
+}

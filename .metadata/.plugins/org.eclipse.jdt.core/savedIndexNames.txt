@@ -1,0 +1,20 @@
+INDEX VERSION 1.130+C:\Tools\eclipse\java8-lambda\.metadata\.plugins\org.eclipse.jdt.core
+3282234789.index
+724528697.index
+1423236346.index
+2599608365.index
+3084336754.index
+3164183335.index
+392920989.index
+2914707183.index
+475306972.index
+2938672086.index
+1008790052.index
+1098477813.index
+1060109694.index
+1882987003.index
+1472192903.index
+1246802251.index
+3585227686.index
+2705624544.index
+1249250140.index
